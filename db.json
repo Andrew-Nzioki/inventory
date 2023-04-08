@@ -1,0 +1,49 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Product 1",
+            "description": "This is a description for Product 1.",
+            "quantity": 10,
+            "price": 19.99,
+            "category": "Electronics",
+            "image": "https://example.com/product1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Product 2",
+            "description": "This is a description for Product 2.",
+            "quantity": 5,
+            "price": 29.99,
+            "category": "Fashion",
+            "image": "https://example.com/product2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Product 3",
+            "description": "This is a description for Product 3.",
+            "quantity": 15,
+            "price": 9.99,
+            "category": "Home & Kitchen",
+            "image": "https://example.com/product3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Product 4",
+            "description": "This is a description for Product 4.",
+            "quantity": 20,
+            "price": 14.99,
+            "category": "Toys & Games",
+            "image": "https://example.com/product4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Product 5",
+            "description": "This is a description for Product 5.",
+            "quantity": 7,
+            "price": 24.99,
+            "category": "Beauty & Personal Care",
+            "image": "https://example.com/product5.jpg"
+        }
+    ]
+}
