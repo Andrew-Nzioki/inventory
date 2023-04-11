@@ -2,7 +2,7 @@
     "products": [
         {
             "id": 1,
-            "name": "Product 1",
+            "name": "Trousers",
             "description": "This is a description for Product 1.",
             "quantity": 10,
             "price": 19.99,
@@ -11,7 +11,7 @@
         },
         {
             "id": 2,
-            "name": "Product 2",
+            "name": "Plates",
             "description": "This is a description for Product 2.",
             "quantity": 5,
             "price": 29.99,
@@ -20,7 +20,7 @@
         },
         {
             "id": 3,
-            "name": "Product 3",
+            "name": "Skirts",
             "description": "This is a description for Product 3.",
             "quantity": 15,
             "price": 9.99,
@@ -29,7 +29,7 @@
         },
         {
             "id": 4,
-            "name": "Product 4",
+            "name": "Laptops",
             "description": "This is a description for Product 4.",
             "quantity": 20,
             "price": 14.99,
@@ -38,7 +38,7 @@
         },
         {
             "id": 5,
-            "name": "Product 5",
+            "name": "Tvs",
             "description": "This is a description for Product 5.",
             "quantity": 7,
             "price": 24.99,
