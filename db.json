@@ -2,21 +2,12 @@
   "products": [
     {
       "id": 1,
-      "name": "chicken",
-      "description": "added",
-      "quantity": "12",
-      "price": "50",
-      "category": "yours",
-      "image": "add"
-    },
-    {
-      "id": 2,
-      "name": "Plates",
-      "description": "This is a description for Product 2.",
-      "quantity": 5,
-      "price": 29.99,
-      "category": "Fashion",
-      "image": "https://example.com/product2.jpg"
+      "name": "Trousers",
+      "description": "This is a description for Product 1.",
+      "quantity": 10,
+      "price": 19.99,
+      "category": "Electronics",
+      "image": "https://example.com/product1.jpg"
     },
     {
       "id": 3,
@@ -28,15 +19,6 @@
       "image": "https://example.com/product3.jpg"
     },
     {
-      "id": 4,
-      "name": "Laptops",
-      "description": "This is a description for Product 4.",
-      "quantity": 20,
-      "price": 14.99,
-      "category": "Toys & Games",
-      "image": "https://example.com/product4.jpg"
-    },
-    {
       "id": 5,
       "name": "Tvs",
       "description": "This is a description for Product 5.",
@@ -44,14 +26,6 @@
       "price": 24.99,
       "category": "Beauty & Personal Care",
       "image": "https://example.com/product5.jpg"
-    },
-    {
-      "name": "chicken",
-      "quantity": "0",
-      "price": "12",
-      "img": "nothing here",
-      "description": "added",
-      "id": 6
     }
   ]
 }

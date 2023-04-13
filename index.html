@@ -58,29 +58,33 @@
         <div class="row g-3">
           <div class="col-md-2 mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" />
+            <input type="text" id="name" required />
           </div>
 
           <div class="col-md-2 mb-3">
             <label for="quantity" class="form-label">Quantity</label>
-            <input type="text" id="qty" />
+            <input type="text" id="quantity" />
           </div>
 
           <div class="col-md-3 mb-3">
             <label for="price" class="form-label">Price</label>
             <input type="text" id="price" />
           </div>
+          <div class="col-md-3 mb-3">
+            <label for="price" class="form-label">Category</label>
+            <input type="text" id="category" />
+          </div>
           <div class="mb-3 col-md-3">
             <label for="image" class="form-label">Image</label>
-            <input type="text" id="img" />
+            <input type="text" id="image" />
           </div>
           <div class="col-md-3 mb-3">
             <label for="description" class="form-label">description</label>
-            <input type="text" id="description" />
+            <input type="text" id="description" required/>
           </div>
         </div>
 
-        <button type="submit" class="btn btn-dark">Add</button>
+        <button type="submit" class="btn btn-dark" id="add-products">Add</button>
       </form>
 
       <hr />

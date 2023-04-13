@@ -1,36 +1,14 @@
-Project Name: Build a dynamic and interactive online store using JavaScript.
+This code is a web application that allows the user to add, update, and delete products using CRUD operations (Create, Read, Update, and Delete).
 
-Project Overview: The application will have the following features:
+Prerequisites
+The code requires a running server to fetch data from and send data to. It is assumed that the server is running on http://localhost:3000/products.
+Functionality
+The code has the following functionality:
 
-Users can view a list of products available for purchase.
-Users can filter products by category, price range, and other parameters.
-Users can add products to a shopping cart and modify the quantity.
-Users can checkout and enter their shipping and payment information.
-Users can receive confirmation of their order and a receipt.
-Technical Skills Demonstrated:
-
-Advanced JavaScript concepts such as closures, prototypes, and ES6 features.
-DOM manipulation using JavaScript.
-Asynchronous JavaScript and handling of promises.
-Use of APIs to fetch product data and handle payments.
-Use of modern front-end frameworks like React, Vue, or Angular.
-Technology Stack:
-
-HTML, CSS for front-end.
-JavaScript for functionality.
-React, Vue, or Angular for building the front-end.
-API integration for fetching product data and handling payments.
-Project Deliverables:
-
-A fully functional online store that meets the above requirements.
-A codebase that is well-organized, commented, and follows best practices.
-Documentation on how to use the application and any special features.
-Integration with a payment gateway such as PayPal or Stripe.
-Project Timeline:
-
-Week 1: Project planning and research.
-Week 2: Develop front-end UI using HTML, CSS, and chosen framework.
-Week 3: Implement JavaScript functionality for product filtering, shopping cart, and checkout process.
-Week 4: Implement API integration for fetching product data and handling payments.
-Week 5: Testing and debugging.
-Week 6: Finalizing documentation and project submission.
+getAllProducts() function fetches all the products data from the server and displays it in a table format on the webpage. It also adds the product names to a dropdown list.
+handleAddProduct(e) function is called when the user submits the "Add Product" form. It creates a new product object with the form data and sends a POST request to the server to add the product.
+addProducts(productObj) function sends a POST request to the server to add a new product with the object productObj as its body.
+updateProduct(id, updatedProduct) function sends a PATCH request to the server to update the product with the given id with the new updatedProduct.
+deleteProduct(productId) function sends a DELETE request to the server to delete the product with the given productId. It also removes the product from the DOM.
+Usage
+To use the code, simply run a server on http://localhost:3000/products and open the index.html file in a web browser. You can then add, update, and delete products on the webpage.

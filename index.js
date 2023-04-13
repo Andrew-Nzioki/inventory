@@ -13,20 +13,34 @@ function getAllProducts() {
        <tr>
          <th scope="col">ID</th>
          <th scope="col">Product Name</th>
+         <th scope="col">Category</th>
          <th scope="col">Quantity</th>
          <th scope="col">Price</th>
+         <th scope="col">Actions</th>
        </tr>
      </thead>
+    
      <tbody>
        <tr>
          <th scope="row">${product.id}</th>
          <td> 
-         ${product.name}  <span class="material-symbols-outlined">  edit X </span>
+         ${product.name}   
+         </td>
+         <td> 
+         ${product.category}  
          </td>
          <td> ${product.quantity}</td>
+      
          <td>$${product.price}</td>
+         
+         <td>
+         <button class="btn btn-secondary delete-btn" data-product-id="${product.id}">Delete</button>
+         </td>
+        
        </tr>
-     </tbody>`;
+     </tbody>
+   
+     `;
 
         productCard.className = "table";
         document.querySelector(".container").appendChild(productCard); //add products to the DOM
@@ -35,34 +49,35 @@ function getAllProducts() {
      <option value="${product.id && product.name} " id="productOption">
      `;
         document.getElementById("datalistOptions").appendChild(productOption);
-      //   document
-      //     .querySelector("span")
-      //     .addEventListener("submit", (e)=>{
-      //       e.preventDefault()
-      //       console.log(animal.id)
-      //       handleAddProduct(product)
-          
-      // });
+
+        // document.querySelector('#del').addEventListener('click',(e)=>{
+        //   e.preventDefault()
+        //   console.log('clicked')
+        //   console.log(product.id)
+        // })
       });
     });
 }
+document
+  .querySelector("#add-productForm")
+  .addEventListener("submit", handleAddProduct);
 
 //function to get the data from the form
 function handleAddProduct(e) {
   e.preventDefault();
 
   //adding validation to prevent empty insertion of data
-  if (!e.target.name.value || !e.target.price.value) {
-    alert("Please fill in both fields!");
-    return;
-  }
-  let productObj = {
-    name: e.target.name.value,
-    quantity: e.target.qty.value,
-    price: e.target.price.value,
-    img: e.target.img.value,
-    description: e.target.description.value,
-  };
+  
+   
+    let productObj = {
+      name: e.target.name.value,
+      quantity: e.target.quantity.value,
+      price: e.target.price.value,
+      category: e.target.category.value,
+      image: e.target.image.value,
+      description: e.target.description.value,
+    };
+   
   console.log(productObj);
   addProducts(productObj);
 }
@@ -77,12 +92,18 @@ function addProducts(productObj) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(productObj),
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      console.log("Success:", response);
+      location.reload(); // Reload the page
+    })
+    .catch((error) => {
+      console.error("Error:");
+    });
 }
 
-
 //PATCH request at last
-
 
 const form = document.querySelector("#form-update");
 const updateBtn = document.querySelector("#update-btn");
@@ -97,7 +118,7 @@ updateBtn.addEventListener("click", (event) => {
     quantity: form.elements.quantity.value,
     price: form.elements.price.value,
     category: form.elements.category.value,
-    image: form.elements.image.value
+    image: form.elements.image.value,
   };
 
   updateProduct(id, updatedProduct);
@@ -106,13 +127,41 @@ function updateProduct(id, updatedProduct) {
   fetch(`${url}/${id}`, {
     method: "PATCH",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(updatedProduct)
+    body: JSON.stringify(updatedProduct),
   })
-  .then(res => res.json())
-  .then(data => reload())
-  .catch(error => console.error(error));
+    .then((res) => res.json())
+    .then((response) => {
+      console.log("Success:", response);
+      location.reload(); // Reload the page
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 }
 
+//DELETE
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("delete-btn")) {
+    const productId = event.target.dataset.productId;
+    console.log(event.target.dataset);
+    deleteProduct(productId);
+  }
+});
+
+function deleteProduct(productId) {
+  fetch(`${url}/${productId}`, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Product deleted successfully:", data);
+      // remove the product from the DOM
+      location.reload();
+      // const productCard = document.querySelector(`[data-product-id="${productId}"]`).parentNode.parentNode;
+      // productCard.remove();
+    })
+    .catch((error) => console.log("Error deleting product:"));
+}
 window.addEventListener("load", getAllProducts);
