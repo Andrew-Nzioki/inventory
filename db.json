@@ -2,12 +2,12 @@
   "products": [
     {
       "id": 1,
-      "name": "Trousers",
-      "description": "This is a description for Product 1.",
-      "quantity": 10,
-      "price": 19.99,
-      "category": "Electronics",
-      "image": "https://example.com/product1.jpg"
+      "name": "chicken",
+      "description": "added",
+      "quantity": "12",
+      "price": "50",
+      "category": "yours",
+      "image": "add"
     },
     {
       "id": 2,
@@ -44,6 +44,14 @@
       "price": 24.99,
       "category": "Beauty & Personal Care",
       "image": "https://example.com/product5.jpg"
+    },
+    {
+      "name": "chicken",
+      "quantity": "0",
+      "price": "12",
+      "img": "nothing here",
+      "description": "added",
+      "id": 6
     }
   ]
 }
