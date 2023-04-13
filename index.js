@@ -123,6 +123,8 @@ updateBtn.addEventListener("click", (event) => {
 
   updateProduct(id, updatedProduct);
 });
+
+//function to make the PATCH request
 function updateProduct(id, updatedProduct) {
   fetch(`${url}/${id}`, {
     method: "PATCH",

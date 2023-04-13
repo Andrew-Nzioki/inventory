@@ -1,24 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Trousers",
-      "description": "This is a description for Product 1.",
-      "quantity": 10,
-      "price": 19.99,
-      "category": "Electronics",
-      "image": "https://example.com/product1.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Skirts",
-      "description": "This is a description for Product 3.",
-      "quantity": 15,
-      "price": 9.99,
-      "category": "Home & Kitchen",
-      "image": "https://example.com/product3.jpg"
-    },
-    {
       "id": 5,
       "name": "Tvs",
       "description": "This is a description for Product 5.",
